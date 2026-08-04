@@ -1,0 +1,29 @@
+services:
+  bff:
+    build:
+      context: ./secretaria.bff
+      dockerfile: Dockerfile
+    container_name: secretaria-bff
+    ports:
+      - '8080:8080'
+    env_file:
+      - ./secretaria.bff/.env
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+
+  web:
+    build:
+      context: ./secretaria.web
+      dockerfile: Dockerfile
+    container_name: secretaria-web
+    ports:
+      - '3210:3210'
+    env_file:
+      - ./secretaria.web/.env
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_API_URL=http://bff:8080
+    depends_on:
+      - bff
+    restart: unless-stopped

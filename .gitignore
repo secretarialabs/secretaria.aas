@@ -1,0 +1,38 @@
+# opencode / tooling
+opencode.json
+.opencode/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+.cursor/
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Docker
+docker-compose.override.yml
+.docker/
+
+# Coverage (raíz, si alguna vez corre algo aquí)
+coverage/
+
+# Misc
+*.tsbuildinfo
