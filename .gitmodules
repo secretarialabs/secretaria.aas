@@ -1,6 +1,8 @@
 [submodule "secretaria.web"]
 	path = secretaria.web
 	url = https://github.com/secretarialabs/secretaria.web.git
+	branch = develop
 [submodule "secretaria.bff"]
 	path = secretaria.bff
 	url = https://github.com/secretarialabs/secretaria.bff.git
+	branch = develop
