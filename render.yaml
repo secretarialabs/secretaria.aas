@@ -40,6 +40,8 @@ services:
         sync: false
       - key: OPENROUTER_MODEL
         value: openai/gpt-4.1-mini
+      - key: OPENROUTER_DRAFT_MODEL
+        value: openai/gpt-4.1-mini
       - key: ARCA_REPRESENTATIVE_CUIT
         sync: false
       - key: ARCA_ACCESS_TOKEN
