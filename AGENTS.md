@@ -263,6 +263,7 @@ Leyenda:
 - [x] Creación, listado y cambio de estado de presupuestos desde el chat con aprobación cuando corresponde.
 - [x] Panel de presupuestos con tabla y búsqueda escrita por cliente, fecha, monto y estado.
 - [x] Generación de presupuesto PDF y envío por Resend con confirmación e idempotencia.
+- [x] PDF con datos del Espacio y CUIT fiscal de ARCA cuando están configurados.
 - [x] Conversión de presupuesto aceptado en Factura C con confirmación explícita.
 - [x] Detalle editable con control de revisión, duplicado, archivado y acciones desde la tabla.
 - [x] Historial de eventos, registro de entregas e idempotencia de envíos.
