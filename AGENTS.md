@@ -264,6 +264,10 @@ Leyenda:
 - [x] Panel de presupuestos con tabla y búsqueda escrita por cliente, fecha, monto y estado.
 - [x] Generación de presupuesto PDF y envío por Resend con confirmación e idempotencia.
 - [x] Conversión de presupuesto aceptado en Factura C con confirmación explícita.
+- [x] Detalle editable con control de revisión, duplicado, archivado y acciones desde la tabla.
+- [x] Historial de eventos, registro de entregas e idempotencia de envíos.
+- [x] Enlace público seguro para aceptar o rechazar presupuestos.
+- [x] Persistencia de Facturas C emitidas y relación con el presupuesto de origen.
 - [ ] Registro y conciliación de cobros.
 - [ ] Recordatorios de deuda y links de pago.
 - [ ] Registro, clasificación y reportes de gastos.
