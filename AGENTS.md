@@ -259,8 +259,11 @@ Leyenda:
 - [x] Preparación de Factura C con campos visibles.
 - [x] Emisión de Factura C después de aprobación.
 - [ ] Consulta, descarga, reenvío y repetición de facturas emitidas.
-- [ ] Presupuestos y estados de seguimiento.
-- [ ] Conversión de presupuesto aceptado en factura.
+- [x] Presupuestos persistentes con ítems, totales calculados, numeración por usuario y estados de seguimiento.
+- [x] Creación, listado y cambio de estado de presupuestos desde el chat con aprobación cuando corresponde.
+- [x] Panel de presupuestos con tabla y búsqueda escrita por cliente, fecha, monto y estado.
+- [x] Generación de presupuesto PDF y envío por Resend con confirmación e idempotencia.
+- [x] Conversión de presupuesto aceptado en Factura C con confirmación explícita.
 - [ ] Registro y conciliación de cobros.
 - [ ] Recordatorios de deuda y links de pago.
 - [ ] Registro, clasificación y reportes de gastos.
@@ -282,7 +285,7 @@ Leyenda:
 1. Crear el registro declarativo de herramientas y migrar las herramientas actuales.
 2. Conectar Drive al chat y permitir adjuntar archivos existentes a emails.
 3. Incorporar varios chats con selector de historial y botón de nueva conversación.
-4. Implementar presupuestos, cobros pendientes y recordatorios.
+4. Completar presupuestos con PDF/email y luego implementar cobros pendientes y recordatorios.
 5. Incorporar OCR e imágenes para comprobantes escaneados.
 6. Agregar límites por plan, métricas de tokens y control de concurrencia.
 7. Crear tareas y automatizaciones; usar Trello como primera integración externa del registro.
