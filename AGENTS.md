@@ -104,6 +104,15 @@ agnóstica al rubro y reutilizable.
 - Resumir cobros mensuales.
 - Generar links de pago mediante integraciones autorizadas.
 
+#### Desarrollo local con Mercado Pago
+
+- Para probar links de pago localmente no usar credenciales reales ni las de suscripciones de secretarIA.
+- Usar una aplicación y usuarios de prueba de Mercado Pago. El Access Token de prueba se configura sólo en `.env` local y nunca se comparte por chat ni se versiona.
+- OAuth de cuentas de usuarios requiere `MERCADO_PAGO_CLIENT_ID`, `MERCADO_PAGO_CLIENT_SECRET` y una callback HTTPS pública. En desarrollo se usa ngrok:
+  `MERCADO_PAGO_REDIRECT_URI=https://<subdominio>.ngrok-free.dev/api/v1/integrations/mercadopago/callback`.
+- El túnel debe apuntar a `localhost:8080` y mantenerse activo durante la prueba. Una URL de ngrok cambia al reiniciar el túnel y debe actualizarse tanto en `.env` como en la app de Mercado Pago.
+- Nunca usar ni mezclar el token de Mercado Pago que cobra la suscripción de secretarIA para generar links de cobro de usuarios.
+
 ### Gastos y comprobantes
 
 - Leer facturas, recibos y tickets en PDF o imagen.
@@ -269,8 +278,8 @@ Leyenda:
 - [x] Historial de eventos, registro de entregas e idempotencia de envíos.
 - [x] Enlace público seguro para aceptar o rechazar presupuestos.
 - [x] Persistencia de Facturas C emitidas y relación con el presupuesto de origen.
-- [ ] Registro y conciliación de cobros.
-- [ ] Recordatorios de deuda y links de pago.
+- [-] Registro básico de cobros pendientes, vencimientos y seguimientos desde el módulo Cobros.
+- [-] Conexión OAuth de Mercado Pago disponible; falta generación de links, webhook de pagos y conciliación de punta a punta.
 - [ ] Registro, clasificación y reportes de gastos.
 - [ ] Seguimiento de pagos y vencimientos del monotributo.
 - [ ] Alertas de ingresos y preparación para recategorización.
