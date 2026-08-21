@@ -279,7 +279,7 @@ Leyenda:
 - [x] Enlace público seguro para aceptar o rechazar presupuestos.
 - [x] Persistencia de Facturas C emitidas y relación con el presupuesto de origen.
 - [-] Registro básico de cobros pendientes, vencimientos y seguimientos desde el módulo Cobros.
-- [-] Conexión OAuth de Mercado Pago disponible; falta generación de links, webhook de pagos y conciliación de punta a punta.
+- [-] Conexión OAuth de Mercado Pago y generación de links con la cuenta conectada; falta webhook de pagos y conciliación de punta a punta.
 - [ ] Registro, clasificación y reportes de gastos.
 - [ ] Seguimiento de pagos y vencimientos del monotributo.
 - [ ] Alertas de ingresos y preparación para recategorización.
