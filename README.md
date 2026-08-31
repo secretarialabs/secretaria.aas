@@ -117,6 +117,15 @@ docker compose up --build
 - **Package manager:** pnpm 10.x. Nunca npm/yarn/bun.
 - **No commitear** `.env`, `node_modules/`, `dist/`, `coverage/`, `.tsbuildinfo`.
 
+## Render
+
+El monorepo incluye un blueprint raíz en [render.yaml](./render.yaml) para desplegar ambos servicios en `develop`:
+
+- `secretaria-web-develop`
+- `secretaria-bff-develop`
+
+Cada servicio usa su propio `rootDir` (`secretaria.web` y `secretaria.bff`) para que Render trate el repo como monorepo y despliegue cada app por separado dentro del mismo Blueprint.
+
 ## Servicios externos
 
 - **Supabase:** Auth (sign-up, sign-in, JWT) + DB Postgres gestionada.

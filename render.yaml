@@ -1,0 +1,84 @@
+services:
+  - type: web
+    name: secretaria-bff-develop
+    runtime: docker
+    plan: starter
+    branch: develop
+    rootDir: secretaria.bff
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    autoDeployTrigger: commit
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "8080"
+      - key: CORS_ORIGIN
+        sync: false
+      - key: APP_BASE_URL
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: DIRECT_URL
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_JWT_SECRET
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: INTEGRATIONS_ENCRYPTION_KEY
+        sync: false
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
+      - key: GOOGLE_REDIRECT_URI
+        sync: false
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: OPENROUTER_MODEL
+        value: openai/gpt-4.1-mini
+      - key: OPENROUTER_DRAFT_MODEL
+        value: openai/gpt-4.1-mini
+      - key: ARCA_REPRESENTATIVE_CUIT
+        sync: false
+      - key: ARCA_ACCESS_TOKEN
+        sync: false
+      - key: ARCA_CUIT
+        sync: false
+      - key: ARCA_CERT
+        sync: false
+      - key: ARCA_KEY
+        sync: false
+      - key: MERCADO_PAGO_ACCESS_TOKEN
+        sync: false
+      - key: MERCADO_PAGO_WEBHOOK_URL
+        sync: false
+      - key: MERCADO_PAGO_PORTAL_URL
+        sync: false
+
+  - type: web
+    name: secretaria-web-develop
+    runtime: docker
+    plan: starter
+    branch: develop
+    rootDir: secretaria.web
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    autoDeployTrigger: commit
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "3210"
+      - key: NEXT_PUBLIC_APP_NAME
+        value: secretarIA
+      - key: NEXT_PUBLIC_API_URL
+        sync: false
+      - key: NEXT_PUBLIC_SUPABASE_URL
+        sync: false
+      - key: NEXT_PUBLIC_SUPABASE_ANON_KEY
+        sync: false
